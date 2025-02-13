@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentine's Day :)</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300,400"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://raw.githubusercontent.com/GovindCodes/ValentineWish/8b321e1b65308cc910913c0d17c7eb9467bb0d1d/img/heart.svg"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">
+        <h1 class="one">Hey <span id="name">Manu</span></h1>
+        <p class="two" id="greetingText">I really like this name btw!</p>
+      </div>
+      <div class="three"><p>It's Valentine!!! :D</p></div>
+      <div class="four">
+        <div class="text-box">
+          <p class="hbd-chatbox">
+            Happy Valentine's Day!! Yeee! Love and blah blah...
+          </p>
+          <p class="fake-btn">Send</p>
+        </div>
+      </div>
+      <div class="five">
+        <p class="idea-1">That's what I was going to do.</p>
+        <p class="idea-2">But then I stopped.</p>
+        <p class="idea-3">
+          I realised, I wanted to do something <strong>special</strong>.
+        </p>
+        <p class="idea-4">Because,</p>
+        <p class="idea-5">You are Special <span>:)</span></p>
+        <p class="idea-6">
+          <span>S</span>
+          <span>O</span>
+        </p>
+      </div>
+      <div class="six">
+        <img
+          src="./Pic.jpg"
+          alt=""
+          class="girl-dp"
+          style="width: 300px; height: 400px;"
+        />
+        <div class="wish">
+          <h3 class="wish-hbd">Happy Valentine's Day Gorgeous</h3>
+          <h5 id="wishText">I find peace when I am with you</h5>
+        </div>
+      </div>
+      <div class="seven">
+        <div class="baloons">
+          <img
+            src="https://raw.githubusercontent.com/GovindCodes/ValentineWish/8b321e1b65308cc910913c0d17c7eb9467bb0d1d/img/balloon.svg"
+            alt=""
+          />
+          <img
+            src="https://raw.githubusercontent.com/GovindCodes/ValentineWish/8b321e1b65308cc910913c0d17c7eb9467bb0d1d/img/heart.svg"
+          />
+          <img
+            src="https://raw.githubusercontent.com/GovindCodes/ValentineWish/8b321e1b65308cc910913c0d17c7eb9467bb0d1d/img/music-note.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="eight">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+      </div>
+      <div class="nine">
+        <p>Now come back to me as soon as possible</p>
+        <p id="replay">Waiting to hug you badly, missing you a lot</p>
+        <p class="last-smile">:)</p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tl = gsap.timeline();
+
+        tl.set(".container", { autoAlpha: 1 })
+
+          // Fade in "Hey xyz"
+          .from(".one", { opacity: 0, y: 10, duration: 1 })
+          .from(".two", { opacity: 0, y: 10, duration: 1 })
+          .to(".one, .two", { opacity: 0, y: -10, duration: 1, delay: 2 })
+
+          // "It's Valentine" text
+          .from(".three", { opacity: 0, y: 10, duration: 1 })
+          .to(".three", { opacity: 0, y: -10, duration: 1, delay: 2 })
+
+          // Chat box effect
+          .from(".four", { scale: 0.5, opacity: 0, duration: 1 })
+          .from(".fake-btn", { scale: 0.5, opacity: 0, duration: 0.5 })
+          .to(".four", { scale: 0.5, opacity: 0, duration: 1, delay: 2 })
+
+          // Idea texts appearing one by one
+          .from(".five .idea-1", { opacity: 0, y: 20, duration: 1 })
+          .to(".five .idea-1", { opacity: 0, duration: 1, delay: 1 })
+          .from(".five .idea-2", { opacity: 0, y: 20, duration: 1 })
+          .to(".five .idea-2", { opacity: 0, duration: 1, delay: 1 })
+          .from(".five .idea-3", { opacity: 0, y: 20, duration: 1 })
+          .to(".five .idea-3", { opacity: 0, duration: 1, delay: 1 })
+          .from(".five .idea-4", { opacity: 0, y: 20, duration: 1 })
+          .to(".five .idea-4", { opacity: 0, duration: 1, delay: 1 })
+          .from(".five .idea-5", { opacity: 0, y: 20, duration: 1 })
+          .to(".five .idea-5", { opacity: 0, duration: 1, delay: 1 })
+
+          // "SO" Text Fix (Ensures it fades properly)
+          .from(".five .idea-6 span", {
+            opacity: 0,
+            scale: 0.5,
+            duration: 1,
+            stagger: 0.3,
+          })
+          .to(".five .idea-6 span", {
+            opacity: 0,
+            scale: 0.5,
+            duration: 1,
+            delay: 1,
+          })
+
+          // Main Valentine's message
+          .from(".six", { opacity: 0, scale: 0.5, duration: 1 })
+          .from(".wish h5", { opacity: 0, y: 10, duration: 1 })
+          .to(".six", { opacity: 0, duration: 1, delay: 2 })
+
+          // Balloons floating upwards smoothly
+          .from(".baloons img", {
+            opacity: 0,
+            y: 100,
+            duration: 2,
+            stagger: 0.5,
+            ease: "power2.out",
+          })
+          .to(".baloons img", {
+            y: -150,
+            opacity: 0,
+            duration: 2,
+            stagger: 0.5,
+            ease: "power2.in",
+          })
+
+          // Emoji animation fix - Ensuring transition into section nine
+          .from(".eight svg", {
+            opacity: 0,
+            scale: 0.8,
+            rotation: () => gsap.utils.random(-30, 30),
+            x: () => gsap.utils.random(-50, 50),
+            y: () => gsap.utils.random(-30, 30),
+            stagger: 0.3,
+            duration: 1.2,
+            ease: "elastic.out(1, 0.5)",
+          })
+          .to(".eight svg", {
+            opacity: 0,
+            y: -20, // Moves slightly up while fading out
+            duration: 1,
+            stagger: 0.1,
+            ease: "power1.inOut",  
+          })
+
+          // Final message (Now properly synced)
+          .from(".nine p", {
+            opacity: 0,
+            y: 10,
+            stagger: 0.5,
+            duration: 1,
+            delay: -1, // **Fix:** Overlaps the fade-out for smooth transition
+          });
+
+        // Replay button functionality
+        document
+          .getElementById("replay")
+          ?.addEventListener("click", () => tl.restart());
+      });
+    </script>
+  </body>
+</html>
