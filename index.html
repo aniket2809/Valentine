@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <audio id="background-audio" autoplay muted>
+      <source src="audio.mp3" type="audio/mpeg" />
+      <source src="audio.ogg" type="audio/ogg" />
+    </audio>
     <div class="container">
       <div class="one">
         <h1 class="one">Hey <span id="name">Manu</span></h1>
@@ -48,57 +52,14 @@
           src="./Pic.jpg"
           alt=""
           class="girl-dp"
-          style="width: 300px; height: 400px;"
+          style="width: 300px; height: 400px"
         />
         <div class="wish">
           <h3 class="wish-hbd">Happy Valentine's Day Gorgeous</h3>
           <h5 id="wishText">I find peace when I am with you</h5>
         </div>
       </div>
-      <div class="seven">
-        <div class="baloons">
-          <img
-            src="https://raw.githubusercontent.com/GovindCodes/ValentineWish/8b321e1b65308cc910913c0d17c7eb9467bb0d1d/img/balloon.svg"
-            alt=""
-          />
-          <img
-            src="https://raw.githubusercontent.com/GovindCodes/ValentineWish/8b321e1b65308cc910913c0d17c7eb9467bb0d1d/img/heart.svg"
-          />
-          <img
-            src="https://raw.githubusercontent.com/GovindCodes/ValentineWish/8b321e1b65308cc910913c0d17c7eb9467bb0d1d/img/music-note.svg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="eight">
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-      </div>
+      
       <div class="nine">
         <p>Now come back to me as soon as possible</p>
         <p id="replay">Waiting to hug you badly, missing you a lot</p>
@@ -157,40 +118,40 @@
           .from(".wish h5", { opacity: 0, y: 10, duration: 1 })
           .to(".six", { opacity: 0, duration: 1, delay: 2 })
 
-          // Balloons floating upwards smoothly
-          .from(".baloons img", {
-            opacity: 0,
-            y: 100,
-            duration: 2,
-            stagger: 0.5,
-            ease: "power2.out",
-          })
-          .to(".baloons img", {
-            y: -150,
-            opacity: 0,
-            duration: 2,
-            stagger: 0.5,
-            ease: "power2.in",
-          })
+          // // Balloons floating upwards smoothly
+          // .from(".baloons img", {
+          //   opacity: 0,
+          //   y: 100,
+          //   duration: 2,
+          //   stagger: 0.5,
+          //   ease: "power2.out",
+          // })
+          // .to(".baloons img", {
+          //   y: -150,
+          //   opacity: 0,
+          //   duration: 2,
+          //   stagger: 0.5,
+          //   ease: "power2.in",
+          // })
 
-          // Emoji animation fix - Ensuring transition into section nine
-          .from(".eight svg", {
-            opacity: 0,
-            scale: 0.8,
-            rotation: () => gsap.utils.random(-30, 30),
-            x: () => gsap.utils.random(-50, 50),
-            y: () => gsap.utils.random(-30, 30),
-            stagger: 0.3,
-            duration: 1.2,
-            ease: "elastic.out(1, 0.5)",
-          })
-          .to(".eight svg", {
-            opacity: 0,
-            y: -20, // Moves slightly up while fading out
-            duration: 1,
-            stagger: 0.1,
-            ease: "power1.inOut",  
-          })
+          // // Emoji animation fix - Ensuring transition into section nine
+          // .from(".eight svg", {
+          //   opacity: 0,
+          //   scale: 0.8,
+          //   rotation: () => gsap.utils.random(-30, 30),
+          //   x: () => gsap.utils.random(-50, 50),
+          //   y: () => gsap.utils.random(-30, 30),
+          //   stagger: 0.3,
+          //   duration: 1.2,
+          //   ease: "elastic.out(1, 0.5)",
+          // })
+          // .to(".eight svg", {
+          //   opacity: 0,
+          //   y: -20, // Moves slightly up while fading out
+          //   duration: 1,
+          //   stagger: 0.1,
+          //   ease: "power1.inOut",
+          // })
 
           // Final message (Now properly synced)
           .from(".nine p", {
@@ -198,7 +159,7 @@
             y: 10,
             stagger: 0.5,
             duration: 1,
-            delay: -1, // **Fix:** Overlaps the fade-out for smooth transition
+            delay: 1, // **Fix:** Overlaps the fade-out for smooth transition
           });
 
         // Replay button functionality
@@ -206,6 +167,39 @@
           .getElementById("replay")
           ?.addEventListener("click", () => tl.restart());
       });
+
+      document.addEventListener("DOMContentLoaded", () => {
+    let audio = document.getElementById("background-audio");
+
+    // Try playing the audio
+    let playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+            setTimeout(() => {
+                audio.muted = false; // Unmute after a short delay
+            }, 500);
+        }).catch(error => {
+            console.log("Autoplay blocked: User interaction needed.", error);
+            // Show a play button if autoplay is blocked
+            let playButton = document.createElement("button");
+            playButton.innerText = "Play Music";
+            playButton.style.position = "absolute";
+            playButton.style.top = "10px";
+            playButton.style.left = "10px";
+            playButton.style.padding = "10px";
+            playButton.style.zIndex = "1000";
+
+            document.body.appendChild(playButton);
+
+            playButton.addEventListener("click", () => {
+                audio.muted = false;
+                audio.play();
+                playButton.remove(); // Remove button after playing
+            });
+        });
+    }
+});
     </script>
   </body>
 </html>
